@@ -67,7 +67,7 @@ const Hero = () => {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/najnisaikh/"
               target="_blank"
               rel="noreferrer"
               className="flex items-center gap-2 transition hover:text-white"
