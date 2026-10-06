@@ -19,7 +19,7 @@ const Hero = () => {
       <div className="mx-auto max-w-6xl px-6 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24">
         <div className="max-w-4xl">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">
-            Naz Khatoon
+            Najani Khatoon
           </p>
           <p className="mb-8 text-xs font-medium uppercase tracking-[0.24em] text-slate-400">
             Full Stack Developer

@@ -1,31 +1,12 @@
 import SectionTitle from '../components/SectionTitle';
+import About from '../sections/About';
 import Hero from '../sections/Hero';
 
 const Home = () => {
   return (
     <main className="min-h-screen">
       <Hero />
-
-      <section id="about" className="mx-auto max-w-6xl px-6 py-20 md:px-8">
-        <SectionTitle
-          eyebrow="About"
-          title="I build clear, modern experiences with a product-minded lens."
-          subtitle="I enjoy translating ideas into interfaces that feel elegant, practical, and easy to use. My work balances design detail, technical clarity, and real user needs."
-        />
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            ['Design-first', 'Thoughtful UI decisions guided by clarity, hierarchy, and usability.'],
-            ['Frontend craft', 'Strong attention to reusable components, responsiveness, and maintainability.'],
-            ['Growth mindset', 'Always learning, refining process, and improving the product experience.'],
-          ].map(([title, text]) => (
-            <article key={title} className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
-              <h3 className="text-xl font-semibold text-white">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <About />
 
       <section id="projects" className="mx-auto max-w-6xl px-6 py-20 md:px-8">
         <SectionTitle
@@ -81,7 +62,7 @@ const Home = () => {
             </div>
 
             <a
-              href="mailto:najani@example.com"
+              href="mailto:najanikhatoon25@navgurukul.org"
               className="inline-flex items-center justify-center rounded-full border border-cyan-400/50 bg-cyan-400/10 px-6 py-3 text-sm font-medium text-cyan-100 transition hover:border-cyan-300 hover:bg-cyan-400/20"
             >
               najanikhatoon25@navgurukul.org

@@ -21,7 +21,7 @@ const Navbar = () => {
           </div>
           <span>
             <span className="block text-sm font-medium uppercase tracking-[0.14em] text-slate-300">
-              Naz Khatoon
+              Najani Khatoon
             </span>
             <span className="mt-0.5 block text-[10px] font-medium uppercase tracking-[0.16em] text-slate-500">
               Full Stack Developer
