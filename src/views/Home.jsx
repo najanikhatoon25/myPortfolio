@@ -1,34 +1,14 @@
 import SectionTitle from '../components/SectionTitle';
 import About from '../sections/About';
 import Hero from '../sections/Hero';
+import Projects from '../sections/Projects';
 
 const Home = () => {
   return (
     <main className="min-h-screen">
       <Hero />
       <About />
-
-      <section id="projects" className="mx-auto max-w-6xl px-6 py-20 md:px-8">
-        <SectionTitle
-          eyebrow="Projects"
-          title="Selected work that reflects both product thinking and craft."
-          subtitle="This portfolio will soon highlight case studies, problem-solving, and the technologies behind each build."
-        />
-
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {[
-            ['Project One', 'Product UI and experience design for a real-world use case.'],
-            ['Project Two', 'Responsive dashboard and frontend architecture optimization.'],
-            ['Project Three', 'A polished landing experience built for conversion and clarity.'],
-          ].map(([title, description]) => (
-            <article key={title} className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 shadow-lg shadow-slate-950/20">
-              <div className="mb-5 h-40 rounded-2xl border border-slate-700 bg-[linear-gradient(135deg,rgba(34,211,238,0.12),rgba(168,85,247,0.14),rgba(15,23,42,0.7))]" />
-              <h3 className="text-xl font-semibold text-white">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <Projects />
 
       <section id="experience" className="mx-auto max-w-6xl px-6 py-20 md:px-8">
         <SectionTitle
