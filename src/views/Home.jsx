@@ -84,7 +84,7 @@ const Home = () => {
               href="mailto:najani@example.com"
               className="inline-flex items-center justify-center rounded-full border border-cyan-400/50 bg-cyan-400/10 px-6 py-3 text-sm font-medium text-cyan-100 transition hover:border-cyan-300 hover:bg-cyan-400/20"
             >
-              najani@example.com
+              najanikhatoon25@navgurukul.org
             </a>
           </div>
         </div>

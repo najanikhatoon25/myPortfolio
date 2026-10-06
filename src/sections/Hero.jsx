@@ -1,32 +1,13 @@
 import { ArrowRight, BriefcaseBusiness, Globe2, Mail, MapPin } from 'lucide-react';
 import Button from '../components/Button';
+import Navbar from '../components/Navbar';
 
 const Hero = () => {
   return (
-    <header className="relative isolate overflow-hidden">
+    <header id="top" className="relative isolate overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(34,211,238,0.18),_transparent_40%),radial-gradient(circle_at_right,_rgba(168,85,247,0.18),_transparent_35%)]" />
 
-      <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-6 md:px-8">
-        <div className="flex items-center gap-3">
-          <div className="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-400/50 bg-cyan-400/10 text-sm font-semibold text-cyan-200">
-            N
-          </div>
-          <div>
-            <p className="text-sm font-medium uppercase tracking-[0.2em] text-slate-300">Najani</p>
-          </div>
-        </div>
-
-        <div className="hidden items-center gap-8 text-sm text-slate-300 md:flex">
-          <a href="#about" className="transition hover:text-white">About</a>
-          <a href="#projects" className="transition hover:text-white">Projects</a>
-          <a href="#experience" className="transition hover:text-white">Experience</a>
-          <a href="#contact" className="transition hover:text-white">Contact</a>
-        </div>
-
-        <Button href="#contact" variant="secondary" className="hidden md:inline-flex">
-          Let&apos;s Talk
-        </Button>
-      </nav>
+      <Navbar />
 
       <div className="mx-auto grid max-w-6xl gap-12 px-6 pb-16 pt-12 md:grid-cols-[1.2fr_0.8fr] md:px-8 md:pb-24 md:pt-20">
         <div>
