@@ -1,4 +1,11 @@
-import { ArrowRight, BriefcaseBusiness, Globe2, Mail, MapPin } from 'lucide-react';
+import {
+  ArrowRight,
+  BriefcaseBusiness,
+  CodeXml,
+  Download,
+  Mail,
+  MapPin,
+} from 'lucide-react';
 import Button from '../components/Button';
 import Navbar from '../components/Navbar';
 
@@ -9,75 +16,78 @@ const Hero = () => {
 
       <Navbar />
 
-      <div className="mx-auto grid max-w-6xl gap-12 px-6 pb-16 pt-12 md:grid-cols-[1.2fr_0.8fr] md:px-8 md:pb-24 md:pt-20">
-        <div>
-          <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-100">
+      <div className="mx-auto max-w-6xl px-6 pb-20 pt-16 md:px-8 md:pb-28 md:pt-24">
+        <div className="max-w-4xl">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.28em] text-cyan-300">
+            Naz Khatoon
+          </p>
+          <p className="mb-8 text-xs font-medium uppercase tracking-[0.24em] text-slate-400">
+            Full Stack Developer
+          </p>
+
+          <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-cyan-400/30 bg-cyan-400/10 px-3 py-1 text-xs font-medium text-cyan-100">
             <span className="h-2 w-2 rounded-full bg-cyan-300" />
-            Available for product and frontend roles
+            Open to opportunities
           </div>
 
-          <h1 className="max-w-xl text-4xl font-semibold tracking-tight text-white md:text-6xl">
-            Building thoughtful digital experiences for people and products.
+          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white md:text-6xl">
+            I build web applications that solve real problems.
           </h1>
 
-          <p className="mt-6 max-w-lg text-lg leading-8 text-slate-300">
-            I&apos;m Najani, a frontend developer focused on clean interfaces, performance, and
-            product thinking. I design and build polished user experiences that feel simple,
-            accessible, and memorable.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+            I enjoy turning ideas into simple, useful and scalable digital experiences using
+            modern web technologies.
           </p>
 
           <div className="mt-8 flex flex-wrap items-center gap-4">
             <Button href="#projects" className="gap-2 px-6 py-3">
-              View Projects
+              View My Work
               <ArrowRight size={16} />
             </Button>
-            <Button href="#contact" variant="secondary" className="gap-2 px-6 py-3">
-              <Mail size={16} />
-              Contact Me
+            <Button
+              type="button"
+              variant="secondary"
+              className="cursor-not-allowed gap-2 px-6 py-3 opacity-60"
+              disabled
+              title="Add your resume PDF to the project to enable this download."
+            >
+              <Download size={16} />
+              Download Resume
             </Button>
           </div>
 
-          <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-slate-300">
-            <div className="flex items-center gap-2">
-              <MapPin size={16} className="text-cyan-300" />
-              Based in India
-            </div>
-            <a href="https://github.com" className="flex items-center gap-2 transition hover:text-white">
-              <Globe2 size={16} className="text-cyan-300" />
-              Portfolio
+          <div className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm text-slate-300">
+            <a
+              href="https://github.com/najanikhatoon25"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 transition hover:text-white"
+            >
+              <CodeXml size={16} className="text-cyan-300" />
+              GitHub
             </a>
-            <a href="https://linkedin.com" className="flex items-center gap-2 transition hover:text-white">
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center gap-2 transition hover:text-white"
+            >
               <BriefcaseBusiness size={16} className="text-cyan-300" />
-              Experience
+              LinkedIn
+            </a>
+            <a
+              href="mailto:najanikhatoon25@navgurukul.org"
+              className="flex items-center gap-2 transition hover:text-white"
+            >
+              <Mail size={16} className="text-cyan-300" />
+              Email
             </a>
           </div>
-        </div>
 
-        <div className="flex items-center justify-center">
-          <div className="w-full max-w-md rounded-3xl border border-slate-800 bg-slate-900/80 p-6 shadow-[0_30px_80px_rgba(15,23,42,0.8)] backdrop-blur-sm">
-            <div className="mb-6 flex items-center justify-between">
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Profile</p>
-                <h2 className="mt-2 text-2xl font-semibold text-white">Frontend Engineer</h2>
-              </div>
-              <div className="rounded-full border border-emerald-400/40 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-200">
-                Open to work
-              </div>
-            </div>
-
-            <div className="space-y-5">
-              {[
-                ['UI Architecture', 'React, Vite, Design systems'],
-                ['Development', 'Responsive, accessible, performance-first'],
-                ['Focus', 'Thoughtful interfaces with measurable impact'],
-              ].map(([label, value]) => (
-                <div key={label} className="rounded-2xl border border-slate-800 bg-slate-950/60 p-4">
-                  <p className="text-xs uppercase tracking-[0.2em] text-slate-400">{label}</p>
-                  <p className="mt-2 text-base text-slate-200">{value}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+          <p className="mt-8 flex items-center gap-2 text-xs text-slate-500">
+            <MapPin size={14} />
+            Kishanganj, Bihar
+          </p>
         </div>
       </div>
     </header>

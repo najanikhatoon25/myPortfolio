@@ -17,10 +17,15 @@ const Navbar = () => {
       <div className="flex items-center justify-between rounded-full border border-slate-800 bg-slate-950/60 px-4 py-3 shadow-lg shadow-slate-950/20 backdrop-blur-md md:px-6">
         <a href="#top" className="flex items-center gap-3" aria-label="Go to top">
           <div className="flex h-10 w-10 items-center justify-center rounded-full border border-cyan-400/50 bg-cyan-400/10 text-sm font-semibold text-cyan-200">
-            N
+            NK
           </div>
-          <span className="text-sm font-medium uppercase tracking-[0.2em] text-slate-300">
-            Najani
+          <span>
+            <span className="block text-sm font-medium uppercase tracking-[0.14em] text-slate-300">
+              Naz Khatoon
+            </span>
+            <span className="mt-0.5 block text-[10px] font-medium uppercase tracking-[0.16em] text-slate-500">
+              Full Stack Developer
+            </span>
           </span>
         </a>
 
