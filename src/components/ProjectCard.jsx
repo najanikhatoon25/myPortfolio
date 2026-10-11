@@ -14,7 +14,7 @@ const ProjectCard = ({ project }) => {
   return (
     <article className="flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-colors hover:border-slate-700">
       <div className="mb-5 flex items-start justify-between gap-4">
-        <span className="text-sm font-medium tracking-[0.2em] text-cyan-300">{number}</span>
+        <span className="text-sm font-medium tracking-[0.2em] text-amber-300">{number}</span>
         <span className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">
           {category}
         </span>
@@ -26,7 +26,7 @@ const ProjectCard = ({ project }) => {
       <ul className="mt-4 space-y-2 text-sm text-slate-400">
         {highlights.map((highlight) => (
           <li key={highlight} className="flex gap-2">
-            <span aria-hidden="true" className="text-cyan-300">·</span>
+            <span aria-hidden="true" className="text-amber-300">·</span>
             {highlight}
           </li>
         ))}
@@ -47,7 +47,7 @@ const ProjectCard = ({ project }) => {
         href={repositoryUrl}
         target="_blank"
         rel="noreferrer"
-        className="mt-6 inline-flex w-fit items-center gap-2 text-sm font-medium text-cyan-200 transition hover:text-cyan-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-cyan-300"
+        className="mt-6 inline-flex w-fit items-center gap-2 text-sm font-medium text-amber-200 transition hover:text-amber-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-amber-300"
       >
         View source
         <ExternalLink size={15} aria-hidden="true" />

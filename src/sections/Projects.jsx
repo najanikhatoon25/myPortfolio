@@ -6,6 +6,7 @@ const Projects = () => {
   return (
     <section id="projects" className="mx-auto max-w-6xl px-6 py-20 md:px-8">
       <SectionTitle
+        as="h1"
         eyebrow="Selected Work"
         title="Projects built to solve practical problems."
         subtitle="A selection of projects from my full-stack and frontend development work."

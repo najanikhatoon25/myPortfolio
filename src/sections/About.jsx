@@ -22,6 +22,7 @@ const About = () => {
   return (
     <section id="about" className="mx-auto max-w-6xl px-6 py-20 md:px-8">
       <SectionTitle
+        as="h1"
         eyebrow="About Me"
         title="A developer who values useful solutions and people."
         subtitle="I'm a Full Stack Developer with hands-on training in Python and web application development. I enjoy solving problems by building, debugging, and deploying applications. My experience supporting students as an Academic Coordinator has also strengthened my communication, teamwork, adaptability, and leadership."
