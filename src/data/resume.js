@@ -23,7 +23,7 @@ export const experiences = [
   {
     role: 'English Facilitator',
     organization: 'NavGurukul',
-    period: '08/2025 – 01/2025',
+    period: '10/08/2025 – 01/01/2026',
     location: 'Kishanganj, Bihar',
     responsibilities: [
       'Conducted 30+ interactive English speaking sessions for 40+ learners.',
@@ -41,6 +41,23 @@ export const experiences = [
       'Helped students develop basic communication, learning, and creative skills.',
       'Managed classroom activities and supported students’ overall growth and participation.',
     ],
+  },
+];
+
+export const certificates = [
+  {
+    title: 'Certificate of Recognition — English Facilitator',
+    organization: 'NavGurukul',
+    date: '10/08/2025 – 01/01/2026',
+    image: '/certificates/english-facilitator-recognition.jpeg',
+    alt: 'NavGurukul Certificate of Recognition for Najani Khatoon’s work as an English Facilitator',
+  },
+  {
+    title: 'Certificate of Participation — Nadi Mitra Abhiyan',
+    organization: 'National Youth Climate Consortium',
+    date: '16 January 2026',
+    image: '/certificates/nadi-mitra-abhiyan-participation.jpeg',
+    alt: 'Certificate of Participation for Nadi Mitra Abhiyan in Bhatgaon, Kishanganj',
   },
 ];
 

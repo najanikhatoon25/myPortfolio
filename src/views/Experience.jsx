@@ -1,5 +1,6 @@
 import PageLayout from '../components/PageLayout';
-import { experiences } from '../data/resume';
+import CertificateCard from '../components/CertificateCard';
+import { certificates, experiences } from '../data/resume';
 
 const Experience = () => (
   <PageLayout
@@ -28,6 +29,22 @@ const Experience = () => (
         </article>
       ))}
     </div>
+
+    <section aria-labelledby="certificates-title" className="mt-14">
+      <div className="mb-6">
+        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-300">
+          Recognition
+        </p>
+        <h2 id="certificates-title" className="mt-2 text-2xl font-semibold text-white">
+          Certificates
+        </h2>
+      </div>
+      <div className="grid gap-5 sm:grid-cols-2">
+        {certificates.map((certificate) => (
+          <CertificateCard key={certificate.title} certificate={certificate} />
+        ))}
+      </div>
+    </section>
   </PageLayout>
 );
 

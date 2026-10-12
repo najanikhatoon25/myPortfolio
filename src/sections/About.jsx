@@ -20,7 +20,7 @@ const strengths = [
 
 const About = () => {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-6 py-20 md:px-8">
+    <section id="about" className="mx-auto max-w-6xl px-6 py-20 md:px-8 max-[320px]:px-0">
       <SectionTitle
         as="h1"
         eyebrow="About Me"
@@ -28,11 +28,11 @@ const About = () => {
         subtitle="I'm a Full Stack Developer with hands-on training in Python and web application development. I enjoy solving problems by building, debugging, and deploying applications. My experience supporting students as an Academic Coordinator has also strengthened my communication, teamwork, adaptability, and leadership."
       />
 
-      <div className="grid gap-5 md:grid-cols-3">
+      <div className="grid min-w-0 gap-5 md:grid-cols-3">
         {strengths.map(({ title, description }) => (
           <article
             key={title}
-            className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6"
+            className="min-w-0 rounded-2xl border border-slate-800 bg-slate-900/50 p-6 max-[320px]:p-4"
           >
             <h3 className="text-lg font-semibold text-white">{title}</h3>
             <p className="mt-3 text-sm leading-7 text-slate-300">{description}</p>

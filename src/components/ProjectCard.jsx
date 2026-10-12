@@ -12,10 +12,10 @@ const ProjectCard = ({ project }) => {
   } = project;
 
   return (
-    <article className="flex h-full flex-col rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-colors hover:border-slate-700">
-      <div className="mb-5 flex items-start justify-between gap-4">
+    <article className="flex h-full min-w-0 flex-col rounded-2xl border border-slate-800 bg-slate-900/50 p-6 transition-colors hover:border-slate-700 max-[320px]:p-4">
+      <div className="mb-5 flex min-w-0 items-start justify-between gap-4 max-[320px]:gap-2">
         <span className="text-sm font-medium tracking-[0.2em] text-amber-300">{number}</span>
-        <span className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300">
+        <span className="rounded-full border border-slate-700 px-3 py-1 text-xs text-slate-300 max-[320px]:px-2">
           {category}
         </span>
       </div>
