@@ -1,96 +1,76 @@
-import SectionTitle from '../components/SectionTitle';
-import Hero from '../sections/Hero';
+import { ArrowDownToLine, ArrowRight, BriefcaseBusiness, CodeXml, Mail, MapPin } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { education, profile } from '../data/resume';
 
-const Home = () => {
-  return (
-    <main className="min-h-screen">
-      <Hero />
+const Home = () => (
+  <main className="relative isolate overflow-hidden">
+    <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[28rem] bg-[radial-gradient(ellipse_at_20%_0%,rgba(245,158,11,0.14),transparent_55%),radial-gradient(ellipse_at_85%_30%,rgba(217,119,6,0.09),transparent_45%)]" />
+    <div className="mx-auto w-full max-w-5xl px-6 py-14 sm:py-20 md:px-8 md:py-24 max-[320px]:px-3 max-[320px]:py-9">
+      <div className="grid items-start gap-10 lg:grid-cols-[minmax(0,1.4fr)_minmax(16rem,0.7fr)] lg:gap-14">
+        <section>
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.28em] text-amber-300">
+            Full Stack Developer
+          </p>
+          <h1 className="max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl md:text-6xl max-[320px]:text-3xl">
+            {profile.name}
+          </h1>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
+            I build web applications using JavaScript and modern web technologies. I enjoy
+            turning ideas into practical, user-friendly digital experiences. With hands-on
+            experience in frontend and backend development, I focus on solving problems,
+            learning continuously, and building useful solutions.
+          </p>
 
-      <section id="about" className="mx-auto max-w-6xl px-6 py-20 md:px-8">
-        <SectionTitle
-          eyebrow="About"
-          title="I build clear, modern experiences with a product-minded lens."
-          subtitle="I enjoy translating ideas into interfaces that feel elegant, practical, and easy to use. My work balances design detail, technical clarity, and real user needs."
-        />
-
-        <div className="grid gap-6 md:grid-cols-3">
-          {[
-            ['Design-first', 'Thoughtful UI decisions guided by clarity, hierarchy, and usability.'],
-            ['Frontend craft', 'Strong attention to reusable components, responsiveness, and maintainability.'],
-            ['Growth mindset', 'Always learning, refining process, and improving the product experience.'],
-          ].map(([title, text]) => (
-            <article key={title} className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6">
-              <h3 className="text-xl font-semibold text-white">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{text}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="projects" className="mx-auto max-w-6xl px-6 py-20 md:px-8">
-        <SectionTitle
-          eyebrow="Projects"
-          title="Selected work that reflects both product thinking and craft."
-          subtitle="This portfolio will soon highlight case studies, problem-solving, and the technologies behind each build."
-        />
-
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-          {[
-            ['Project One', 'Product UI and experience design for a real-world use case.'],
-            ['Project Two', 'Responsive dashboard and frontend architecture optimization.'],
-            ['Project Three', 'A polished landing experience built for conversion and clarity.'],
-          ].map(([title, description]) => (
-            <article key={title} className="rounded-3xl border border-slate-800 bg-slate-900/60 p-6 shadow-lg shadow-slate-950/20">
-              <div className="mb-5 h-40 rounded-2xl border border-slate-700 bg-[linear-gradient(135deg,rgba(34,211,238,0.12),rgba(168,85,247,0.14),rgba(15,23,42,0.7))]" />
-              <h3 className="text-xl font-semibold text-white">{title}</h3>
-              <p className="mt-3 text-sm leading-7 text-slate-300">{description}</p>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section id="experience" className="mx-auto max-w-6xl px-6 py-20 md:px-8">
-        <SectionTitle
-          eyebrow="Experience"
-          title="Product-minded frontend work shaped by learning and iteration."
-          subtitle="This section is being prepared as the foundation for the full portfolio story and resume highlights."
-        />
-
-        <div className="space-y-5">
-          {[
-            ['Frontend Developer', 'Building responsive interfaces with modern React patterns and reusable components.'],
-            ['UI/UX Focus', 'Turning user problems into structured UI flows and accessible product decisions.'],
-            ['Continuous Learning', 'Exploring performance improvements, design systems, and user-centered techniques.'],
-          ].map(([role, detail]) => (
-            <div key={role} className="rounded-2xl border border-slate-800 bg-slate-900/60 p-5">
-              <p className="text-lg font-medium text-white">{role}</p>
-              <p className="mt-2 text-sm leading-7 text-slate-300">{detail}</p>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section id="contact" className="mx-auto max-w-6xl px-6 pb-24 pt-20 md:px-8">
-        <div className="rounded-[2rem] border border-cyan-400/30 bg-gradient-to-r from-cyan-500/10 via-slate-900 to-violet-500/10 p-8 md:p-10">
-          <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-300">Contact</p>
-              <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
-                Let&apos;s build something meaningful together.
-              </h2>
-            </div>
-
+          <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="mailto:najani@example.com"
-              className="inline-flex items-center justify-center rounded-full border border-cyan-400/50 bg-cyan-400/10 px-6 py-3 text-sm font-medium text-cyan-100 transition hover:border-cyan-300 hover:bg-cyan-400/20"
+              href="/resume"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full border border-amber-400/50 bg-amber-400/10 px-5 py-3 text-sm font-medium text-amber-100 transition hover:bg-amber-400/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
             >
-              najanikhatoon25@navgurukul.org
+              <ArrowDownToLine size={16} aria-hidden="true" />
+              View / Download Resume
             </a>
+            <Link
+              to="/contact"
+              className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/70 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-slate-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
+            >
+              Get in touch <ArrowRight size={16} aria-hidden="true" />
+            </Link>
           </div>
-        </div>
-      </section>
-    </main>
-  );
-};
+          <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-slate-400 max-[200px]:flex-col max-[200px]:items-start">
+            <a className="inline-flex min-h-11 items-center gap-2 transition hover:text-amber-200" href={profile.github} target="_blank" rel="noreferrer">
+              <CodeXml size={16} aria-hidden="true" /> GitHub
+            </a>
+            <a className="inline-flex min-h-11 items-center gap-2 transition hover:text-amber-200" href={profile.linkedin} target="_blank" rel="noreferrer">
+              <BriefcaseBusiness size={16} aria-hidden="true" /> LinkedIn
+            </a>
+            <a className="inline-flex min-h-11 items-center gap-2 transition hover:text-amber-200" href={`mailto:${profile.email}`}>
+              <Mail size={16} aria-hidden="true" /> Email
+            </a>
+            <span className="inline-flex min-h-11 items-center gap-2">
+              <MapPin size={16} aria-hidden="true" /> {profile.location}
+            </span>
+          </div>
+        </section>
+
+        <aside className="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-2xl shadow-black/20 sm:p-7">
+          <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+            Education
+          </p>
+          <div className="mt-5 space-y-5">
+            {education.map((item) => (
+              <div key={item.qualification} className="border-l-2 border-amber-400/70 pl-4">
+                <h2 className="font-medium text-white">{item.qualification}</h2>
+                <p className="mt-1 text-sm text-slate-400">{item.institution}</p>
+                <p className="mt-1 text-xs text-slate-500">{item.period}</p>
+              </div>
+            ))}
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+);
 
 export default Home;
