@@ -12,7 +12,7 @@ export const experiences = [
   {
     role: 'Academic Coordinator',
     organization: 'NavGurukul',
-    period: '02/2026 – Present',
+    period: '02/2026',
     location: 'Kishanganj, Bihar',
     responsibilities: [
       'Supported the academic growth and discipline of 40+ students.',

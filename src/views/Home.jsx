@@ -1,6 +1,6 @@
 import { ArrowDownToLine, ArrowRight, BriefcaseBusiness, CodeXml, Mail, MapPin } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import { education, experiences, profile } from '../data/resume';
+import { education, profile } from '../data/resume';
 
 const Home = () => (
   <main className="relative isolate overflow-hidden">
@@ -15,22 +15,20 @@ const Home = () => (
             {profile.name}
           </h1>
           <p className="mt-5 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg sm:leading-8">
-            I build web applications and enjoy turning ideas into useful digital experiences.
-            My training covered full-stack development and Python, while my work in education
-            has strengthened my communication, teamwork, adaptability, and leadership.
+            I build web applications using JavaScript and modern web technologies. I enjoy
+            turning ideas into practical, user-friendly digital experiences. With hands-on
+            experience in frontend and backend development, I focus on solving problems,
+            learning continuously, and building useful solutions.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <button
-              type="button"
-              disabled
-              title="Upload your resume PDF to enable the download."
-              aria-describedby="resume-download-note"
-              className="inline-flex cursor-not-allowed items-center gap-2 rounded-full border border-amber-400/50 bg-amber-400/10 px-5 py-3 text-sm font-medium text-amber-100 opacity-70"
+            <Link
+              to="/resume"
+              className="inline-flex items-center gap-2 rounded-full border border-amber-400/50 bg-amber-400/10 px-5 py-3 text-sm font-medium text-amber-100 transition hover:bg-amber-400/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
             >
               <ArrowDownToLine size={16} aria-hidden="true" />
-              Download Resume
-            </button>
+              View / Download Resume
+            </Link>
             <Link
               to="/contact"
               className="inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/70 px-5 py-3 text-sm font-medium text-slate-200 transition hover:border-slate-500 hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
@@ -38,10 +36,6 @@ const Home = () => (
               Get in touch <ArrowRight size={16} aria-hidden="true" />
             </Link>
           </div>
-          <p id="resume-download-note" className="mt-2 text-xs text-slate-500">
-            Resume download will be available when the PDF is added.
-          </p>
-
           <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 text-sm text-slate-400 max-[200px]:flex-col max-[200px]:items-start">
             <a className="inline-flex min-h-11 items-center gap-2 transition hover:text-amber-200" href={profile.github} target="_blank" rel="noreferrer">
               <CodeXml size={16} aria-hidden="true" /> GitHub
@@ -60,29 +54,16 @@ const Home = () => (
 
         <aside className="rounded-3xl border border-slate-800 bg-slate-900/70 p-6 shadow-2xl shadow-black/20 sm:p-7">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
-            At a glance
+            Education
           </p>
           <div className="mt-5 space-y-5">
-            <div className="border-l-2 border-amber-400/70 pl-4">
-              <p className="text-sm text-slate-400">Current role</p>
-              <h2 className="mt-1 font-medium text-white">{experiences[0].role}</h2>
-              <p className="mt-1 text-sm text-slate-400">{experiences[0].organization}</p>
-            </div>
-            <div className="border-l-2 border-slate-700 pl-4">
-              <p className="text-sm text-slate-400">Software development</p>
-              <h2 className="mt-1 font-medium text-white">{education[0].qualification}</h2>
-              <p className="mt-1 text-sm text-slate-400">{education[0].institution}</p>
-            </div>
-            <div className="grid grid-cols-2 gap-3 pt-1">
-              <div className="rounded-xl bg-slate-950/70 p-4">
-                <p className="text-2xl font-semibold text-amber-200">40+</p>
-                <p className="mt-1 text-xs leading-5 text-slate-400">students supported</p>
+            {education.map((item) => (
+              <div key={item.qualification} className="border-l-2 border-amber-400/70 pl-4">
+                <h2 className="font-medium text-white">{item.qualification}</h2>
+                <p className="mt-1 text-sm text-slate-400">{item.institution}</p>
+                <p className="mt-1 text-xs text-slate-500">{item.period}</p>
               </div>
-              <div className="rounded-xl bg-slate-950/70 p-4">
-                <p className="text-2xl font-semibold text-amber-200">30+</p>
-                <p className="mt-1 text-xs leading-5 text-slate-400">English sessions</p>
-              </div>
-            </div>
+            ))}
           </div>
         </aside>
       </div>

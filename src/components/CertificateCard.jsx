@@ -30,9 +30,18 @@ const CertificateCard = ({ certificate }) => {
           <span className="block font-semibold text-white">{certificate.title}</span>
           <span className="mt-2 block text-sm text-amber-200">{certificate.organization}</span>
           <span className="mt-1 block text-xs text-slate-400">{certificate.date}</span>
-          <span className="mt-4 block text-xs text-slate-500">Select to view certificate</span>
         </span>
       </button>
+      <div className="px-5 pb-5">
+        <a
+          href={certificate.image}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex min-h-11 items-center text-sm font-medium text-amber-200 underline decoration-amber-400/40 underline-offset-4 transition hover:text-amber-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
+        >
+          View certificate source
+        </a>
+      </div>
 
       <dialog
         ref={dialogRef}

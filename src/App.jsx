@@ -6,6 +6,7 @@ import Contact from './views/Contact';
 import Education from './views/Education';
 import Experience from './views/Experience';
 import Home from './views/Home';
+import Resume from './views/Resume';
 import Skills from './views/Skills';
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
           <Route path="projects" element={<Projects />} />
           <Route path="education" element={<Education />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="resume" element={<Resume />} />
           <Route path="*" element={<Home />} />
         </Route>
       </Routes>
