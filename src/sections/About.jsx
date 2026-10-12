@@ -1,6 +1,4 @@
 import SectionTitle from '../components/SectionTitle';
-import CertificateCard from '../components/CertificateCard';
-import { certificates } from '../data/resume';
 
 const strengths = [
   {
@@ -21,10 +19,6 @@ const strengths = [
 ];
 
 const About = () => {
-  const nadiMitraCertificate = certificates.find((certificate) =>
-    certificate.title.includes('Nadi Mitra'),
-  );
-
   return (
     <section id="about" className="mx-auto max-w-6xl px-6 py-20 md:px-8 max-[320px]:px-0">
       <SectionTitle
@@ -46,25 +40,6 @@ const About = () => {
         ))}
       </div>
 
-      {nadiMitraCertificate ? (
-        <article className="mt-8 rounded-2xl border border-amber-400/25 bg-slate-900/60 p-5 sm:p-7">
-          <div className="grid gap-6 md:grid-cols-[minmax(0,1fr)_minmax(15rem,0.8fr)] md:items-start">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-amber-300">
-                Community Participation
-              </p>
-              <h2 className="mt-2 text-xl font-semibold text-white">Nadi Mitra Yatra</h2>
-              <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-300 marker:text-amber-300">
-                <li>Participated in river-cleaning activities.</li>
-                <li>Developed awareness of environmental conservation and protecting natural resources.</li>
-                <li>Experienced the value of community participation in creating a cleaner environment.</li>
-                <li>Learned how small collective efforts can contribute to environmental responsibility.</li>
-              </ul>
-            </div>
-            <CertificateCard certificate={nadiMitraCertificate} />
-          </div>
-        </article>
-      ) : null}
     </section>
   );
 };

@@ -24,6 +24,8 @@ const Home = () => (
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               to="/resume"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center gap-2 rounded-full border border-amber-400/50 bg-amber-400/10 px-5 py-3 text-sm font-medium text-amber-100 transition hover:bg-amber-400/20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-300"
             >
               <ArrowDownToLine size={16} aria-hidden="true" />
